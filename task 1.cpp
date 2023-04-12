@@ -35,16 +35,16 @@ void insertNode(Node*& root, int data) { // добавляем узел
         }
 }
 
-void printTree(Node* root, int n = 0) { // вывод дерева на экран боком
+void printTree(Node* root, int a = 0) { // вывод дерева на экран боком
     if (root == nullptr) {
         return;
     }
-    printTree(root->right, n + 1); 
-    for (int i = 0; i < n; i++) {
+    printTree(root->right, a + 1); 
+    for (int i = 0; i < a; i++) {
         cout << " ";
     }
     cout << root->data << endl;
-    printTree(root->left, n + 1);
+    printTree(root->left, a + 1);
 }
 
 void printLeaves(Node* root) {// вывод листьев в убывающем порядке
